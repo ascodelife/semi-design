@@ -4,6 +4,7 @@ import cls from 'classnames';
 import { cssClasses } from '@douyinfe/semi-foundation/tabs/constants';
 import getDataAttr from '@douyinfe/semi-foundation/utils/getDataAttr';
 import TabsContext from './tabs-context';
+import { TabContextValue } from './interface';
 import TabPaneTransition from './TabPaneTransition';
 import { PlainTab, TabPaneProps } from './interface';
 

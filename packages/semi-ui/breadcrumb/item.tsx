@@ -5,7 +5,7 @@ import { cssClasses } from '@douyinfe/semi-foundation/breadcrumb/constants';
 import BreadcrumbItemFoundation, { BreadcrumbItemAdapter, BreadcrumbItemInfo, Route } from '@douyinfe/semi-foundation/breadcrumb/itemFoundation';
 import BaseComponent, { BaseProps } from '../_base/baseComponent';
 import { noop } from '@douyinfe/semi-foundation/utils/function';
-import BreadContext from './bread-context';
+import BreadContext, { BreadContextType } from './bread-context';
 import Typography from '../typography';
 import { merge, isUndefined, isNull } from 'lodash';
 
@@ -49,6 +49,8 @@ export default class BreadcrumbItem extends BaseComponent<BreadcrumbItemProps, B
         onClick: noop,
         shouldRenderSeparator: true
     };
+
+    context: BreadContextType;
 
     get adapter(): BreadcrumbItemAdapter<BreadcrumbItemProps, BreadcrumbItemState> {
         return {

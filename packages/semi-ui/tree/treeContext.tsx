@@ -1,4 +1,4 @@
-import React, { ReactNode, MouseEvent, DragEvent } from 'react';
+import React, { ReactNode, MouseEvent, DragEvent, KeyboardEvent } from 'react';
 import { Virtualize, ExpandAction } from '@douyinfe/semi-foundation/tree/foundation';
 import {
     TreeNodeData,
@@ -17,9 +17,9 @@ export interface TreeContextValue {
     filterTreeNode?: boolean | ((inputValue: string, treeNodeString: string) => void);
     keyEntities?: KeyEntities;
     onNodeClick?: any;
-    onNodeExpand?: (e: MouseEvent, treeNode: TreeNodeProps) => void;
-    onNodeSelect?: (e: MouseEvent, treeNode: TreeNodeProps) => void;
-    onNodeCheck?: (e: MouseEvent, treeNode: TreeNodeProps) => void;
+    onNodeExpand?: (e: MouseEvent | KeyboardEvent, treeNode: TreeNodeProps) => void;
+    onNodeSelect?: (e: MouseEvent | KeyboardEvent, treeNode: TreeNodeProps) => void;
+    onNodeCheck?: (e: MouseEvent | KeyboardEvent, treeNode: TreeNodeProps) => void;
     onNodeRightClick?: (e: MouseEvent, treeNode: TreeNodeProps) => void;
     onNodeDoubleClick?: (e: MouseEvent, treeNode: TreeNodeProps) => void;
     renderTreeNode?: (treeNode: FlattenNode, ind?: number, style?: React.CSSProperties) => ReactNode;

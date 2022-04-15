@@ -6,7 +6,7 @@ import isEnterPress from '@douyinfe/semi-foundation/utils/isEnterPress';
 import { debounce, isFunction, isString, get, isEmpty } from 'lodash';
 import { IconTreeTriangleDown, IconFile, IconFolder, IconFolderOpen } from '@douyinfe/semi-icons';
 import { Checkbox } from '../checkbox';
-import TreeContext from './treeContext';
+import TreeContext, { TreeContextValue } from './treeContext';
 import Spin from '../spin';
 import { TreeNodeProps, TreeNodeState } from './interface';
 
@@ -42,6 +42,7 @@ export default class TreeNode extends PureComponent<TreeNodeProps, TreeNodeState
 
     debounceSelect: any;
     refNode: HTMLElement;
+    context: TreeContextValue;
 
     constructor(props: TreeNodeProps) {
         super(props);

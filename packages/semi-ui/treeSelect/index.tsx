@@ -32,7 +32,7 @@ import { FixedSizeList as VirtualList, ListItemKeySelector } from 'react-window'
 import '@douyinfe/semi-foundation/tree/tree.scss';
 import '@douyinfe/semi-foundation/treeSelect/treeSelect.scss';
 import BaseComponent, { ValidateStatus } from '../_base/baseComponent';
-import ConfigContext from '../configProvider/context';
+import ConfigContext, { ContextValue } from '../configProvider/context';
 import TagGroup from '../tag/group';
 import Tag, { TagProps } from '../tag/index';
 import Input, { InputProps } from '../input/index';
@@ -294,6 +294,7 @@ class TreeSelect extends BaseComponent<TreeSelectProps, TreeSelectState> {
     onNodeDoubleClick: any;
     onMotionEnd: any;
     treeSelectID: string;
+    context: ContextValue;
 
     constructor(props: TreeSelectProps) {
         super(props);
